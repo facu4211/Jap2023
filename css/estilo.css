@@ -1,0 +1,238 @@
+:root {
+    --colorTextos: #49454567;
+}
+
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 43%, rgba(0, 0, 0, 1) 100%, rgba(0, 44, 255, 1) 100%);
+    /* background: #BBD2C5; 
+    background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  */
+    /* background: linear-gradient(to right, #536976, #BBD2C5); W3C, IE 10+/Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Exo', sans-serif;
+    font-variant: small-caps;
+    color: #229fbc;
+    font-weight: 700;
+}
+
+#form{
+    margin: auto;
+    width: 50%;
+}
+
+form {
+    
+    background: #fff;
+    padding: 150px 350px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 65px;
+    box-sizing: border-box;
+}
+
+
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+form .grupo {
+    position: relative;
+    margin: 10px;
+}
+
+input {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+}
+
+input:focus {
+    outline: none;
+    color: #5e5d5d;
+}
+
+label {
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: #2196f3;
+    padding: 10px;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #536976, #BBD2C5);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before {
+    width: 100%;
+}
+
+button {
+    font-family: 'roboto';
+    background: #BBD2C5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #536976, #BBD2C5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #536976, #BBD2C5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border: none;
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    color: #fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contenedor {
+    width: 60%;
+    max-width: 1000px;
+    margin: 0;
+}
+
+/*@media screen and (max-width:500px){
+    form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:300px){
+    form{
+        width: 60%;
+    }
+}*/
+
+
+.overlay {
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.overlay.active {
+    visibility: visible;
+}
+
+.popup {
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    text-align: center;
+    height: 650px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popup .btn-cerrar-popup {
+    font-size: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: right;
+    color: #BBBBBB;
+    transition: .3s ease all;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.popup .btn-cerrar-popup:hover {
+    color: #000;
+}
+
+.popup form .contenedor-inputs {}
+
+
+@media screen and (max-width: 320px) {
+    .form {
+        width: 100%;
+    }
+
+    .popup {
+        width: 100%;
+    }
+
+    .popup .btn-cerrar-popup {
+        margin-top: 40px;
+        margin-right: 40px;
+        font-size: 20px;
+    }
+
+    .contenedor {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .contenedor {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .contenedor {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .contenedor {
+        width: 100%;
+    }
+}

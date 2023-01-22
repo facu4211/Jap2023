@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav container justify-content-between">
+          <li class="nav-item">
+            <a href="base.html" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="categories.html" class="nav-link">Categoria</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a href="sell.html" class="nav-link">Vender</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Bienvenid@
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+              <a class="dropdown-item" href="cart.html">Mi carrito</a>
+              <a class="dropdown-item" href="index.html">Cerrar sesion</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <div class="container-all">
+    <div class="text-center">
+      <h2 class="title card-titulo" id="productName"></h2>
+    </div>
+    <table class="table table-bordered table-dark" id="tabla">
+      <tbody>
+        <tr>
+          <td>Categoria</td>
+          <td id="productCat"></td>
+        </tr>
+        <tr>
+          <td>Vendidos</td>
+          <td id="soldCount"></td>
+        </tr>
+        <tr>
+          <td id="currency"></td>
+          <td id="cost"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button type="button" class="btn btn-secondary btn-lg" id="boton">Agregar al carrito</button>
+    <button type="button" class="btn btn-primary btn-lg" id="boton2">Comprar</button>
+    
+    <!--------Carousel-------->
+    <div>
+      <div class="col-9" >
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" id="galleria">
+          </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+        </div>
+      </div>
+      </div>
+    
+    
+    <!-- <div class="product">
+      <div class="img-cont">
+        <img id="imageBox" src="/img/prod1_3.jpg">
+      </div>
+      <div class="product-small-img">
+        <img src="/img/prod1.jpg" onclick="myFunction(this)">
+        <img src="/img/prod1_1.jpg" onclick="myFunction(this)">
+        <img src="img/prod1_2.jpg" onclick="myFunction(this)">
+        <img src="img/prod1_4.jpg" onclick="myFunction(this)">
+        <img src="img/prod1_3.jpg" onclick="myFunction(this)">
+      </div>
+    </div> -->
+    
+    <p id="description" class="card-titulo"></p>
+
+  </div>
+
+  
+  <div id="relacionados" class="container-rel"></div>
+
+
+  <div class="container-comments">
+    <div class="row comentarios justify-content-center">
+      <div class="col-6">
+        <form action=""  id="formulario" class="form-comentarios d-flex justify-content-end flex-wrap">
+          <textarea name="" id="textarea" placeholder="Comentario"></textarea>
+          
+          <button class="btn" type="button" onclick="saveComment()">Comentar</button>
+        </form>
+        <div class="form-group">
+          <label for="score" class="card-titulo">Valora nuestro producto</label>
+          <select id="score" class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        <div id="comentarios" class="card-titulo"></div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="text-muted ">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/product-info.js"></script>
+  <script src="js/product-comments.js"></script>
+</body>
+
+</html>

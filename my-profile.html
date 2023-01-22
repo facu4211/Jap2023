@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/dropzone.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav container justify-content-between">
+          <li class="nav-item">
+            <a href="base.html" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="categories.html" class="nav-link">Categoria</a>
+          </li>
+          <li class="nav-item">
+            <a href="products.html" class="nav-link">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a href="sell.html" class="nav-link">Vender</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Bienvenid@
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="my-profile.html">Mi perfil</a>
+              <a class="dropdown-item" href="cart.html">Mi carrito</a>
+              <a class="dropdown-item" href="index.html">Cerrar sesion</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <!-- <form class="formProfile">
+
+    <h2>Mi perfil</h2>
+
+    <p><input id="namePerfil" type="text" placeholder="Indique su nombre" required></p>
+    <p><input id="apellidoPerfil" type="text" placeholder="Indique su apellido" required></p>
+    <p><input id="edadPerfil" type="number" placeholder="Indique su edad" required></p>
+    <p><input id="emailPerfil" type="email" placeholder="Indique su email" required></p>
+    <p><input id="telPerfil" type="tel" placeholder="Indique su numero de telefono" required></p>
+
+    <button class="boton" type="button" onclick="datosRegistro()">Guardar cambios</button>
+  </form> -->
+
+
+  <form class="formProfile2">
+
+    <h2 class="card-titulo">Datos Personales</h2>
+
+    <div class="cont-data">
+      <span class="card-titulo"><strong>Nombre:</strong></span>
+      <p id="mostrarNombre" class="card-titulo"></p><br>
+      <span class="card-titulo"><strong>Apellido:</strong></span>
+      <p id="mostrarApellido" class="card-titulo"></p><br>
+      <span class="card-titulo"><strong>Fecha de nacimiento:</strong></span>
+      <p id="mostrarEdad" class="card-titulo"></p><br>
+      <span class="card-titulo"><strong>Email:</strong></span>
+      <p id="mostrarEmail" class="card-titulo"></p><br>
+      <span class="card-titulo"><strong>Telefono:</strong></span>
+      <p id="mostrarTelefono" class="card-titulo"></p><br><br>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Actualizar Datos
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 card-titulo" id="exampleModalLabel">Actualiza tus datos</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label card-titulo">Nombre</label>
+                  <input type="text" class="form-control" id="recipient-name" placeholder="Ingrese su nombre" required>
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label card-titulo">Apellido</label>
+                  <input type="text" class="form-control" id="recipient-lastname" placeholder="Ingrese su apellido" required>
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label card-titulo">Fecha de nacimiento</label>
+                  <input type="date" class="form-control" id="recipient-edad" required>
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label card-titulo">Email</label>
+                  <input type="email" class="form-control" id="recipient-email" placeholder="Ingrese su email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label card-titulo">Telefono</label>
+                  <input type="tel" class="form-control" id="recipient-telefono" placeholder="Ingrese su telefono" required>
+                </div>
+                <button class="btn btn-primary" type="submit" onclick="datosRegistro()">Guardar cambios</button>
+              </form>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary" onclick="datosRegistro()">Guardar cambios</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+  </form>
+
+  </div>
+  <div class="alert fade alert-success" role="alert" id="alertResult">
+    <span id="resultSpan"></span>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div id="spinner-wrapper">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/dropzone.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/my-profile.js"></script>
+  <script src="js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+
+</html>
